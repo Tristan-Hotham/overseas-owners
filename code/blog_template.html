@@ -1,0 +1,141 @@
+<!-- wp:paragraph -->
+<p><em>HM Land Registry keeps a list of every property title in England and Wales owned by a company registered abroad. There are {{n_titles|int}} of them. I put every one I could on the map, small area by small area, to see where they are and what kind of street they are on. {{pc_uko|f0}}% belong to companies from Jersey, Guernsey, the Isle of Man, the British Virgin Islands and the UK's other islands and territories.</em></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://maps.tristanhotham.com/overseas-owners/">Explore the interactive version</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/10.5281/zenodo.24115198">Read the paper</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:paragraph -->
+<p>Who owns your street? For most streets the answer is people: the families in the houses, the landlords who rent them out, the councils and housing associations. But some property in England and Wales is owned by companies incorporated in other countries. Since 2022 those companies have had to tell Companies House who really stands behind them. HM Land Registry has published the list of their properties for years, and it has become a favourite source for journalists and economists asking about money from abroad.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Most of that work looks at central London or at a single headline total. I wanted the plain map. Where, across the whole of England and Wales, are these titles? How bunched up are they? And once you look inside a single town or borough, what kind of neighbourhood are they in?</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>One thing to know first. A title is a legal registration, not a home. It can be one flat, a house, a shop, an office block or a field. So everything here is counted in titles, and I compare them with the number of homes in each area only to make big and small places comparable.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Central London, and then almost everywhere</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Across England and Wales there are {{ew_rate|f1}} overseas company titles for every 1,000 homes. In Westminster there are {{x.westminster_rate|f0}}. In Kensington and Chelsea, {{x.kc_rate|f0}}. Those two boroughs hold {{westminster_kc_titles|int}} titles between them, {{westminster_kc_pc|f0}}% of the whole list, with less than 1% of the homes. The City of London has the highest rate of all, {{x.city_rate|f0}} per 1,000 homes, but it has very few homes and a lot of offices.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_map.png|Map of every small area in England and Wales shaded by overseas company titles per 1,000 homes, darkest in central London, with scattered darker patches across the country|Overseas company titles per 1,000 homes in each small area (LSOA). Information produced by HM Land Registry © Crown copyright 2026.}}
+
+<!-- wp:paragraph -->
+<p>Outside London the highest rate is in Salford, with {{x.salford_rate|f1}} per 1,000 homes, followed by Colchester, North Warwickshire, St Helens, Manchester and Runnymede. London as a whole has {{pc_london|f0}}% of the titles and {{pc_london_dw|f0}}% of the homes. That still leaves {{x.pc_rest_london|f0}}% of titles outside the capital, and every one of the {{main.clusters|int}} districts in England and Wales has at least some.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_lad.png|Bar chart of the 20 districts with the most overseas company titles per 1,000 homes, led by the City of London, Westminster and Kensington and Chelsea, with Salford the first outside London|The 20 districts with the highest rates. Red bars are London boroughs.}}
+
+<!-- wp:paragraph -->
+<p>Zoom in further and it gets more extreme. Half of the titles that can be placed in a small area sit in just {{half_titles_lsoas|int}} small areas, {{half_titles_lsoas_pc|f1}}% of the total. {{x.pc_lsoa_none|f0}}% of small areas have none at all. Some of the very highest are single buildings sold as many separate units: in {{explore.top10_lsoa_single_owner_majority|int}} of the 10 highest small areas, one company holds more than half the titles.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_conc.png|Two curves: titles climb steeply so that half are reached in about 2% of small areas, while homes rise almost in a straight line|How bunched up the titles are compared with homes, across all {{n_lsoa|int}} small areas.}}
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Four places hold seven in ten</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The companies come from {{x.n_named_jur|int}} named places, from Singapore to Panama. But four places hold {{top4_pc|f0}}% of the titles, and all four have a special tie to the UK. Jersey has {{top_j.0.n|int}} titles, the British Virgin Islands {{top_j.1.n|int}}, Guernsey {{top_j.2.n|int}} and the Isle of Man {{top_j.3.n|int}}. Count all the Crown Dependencies and British Overseas Territories and it comes to {{pc_uko|f0}}%. The share is lower in London ({{regions.London.pc_uko|f0}}%) than anywhere else, and highest in Wales ({{regions.Wales.pc_uko|f0}}%).</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_jur.png|Bar chart of the 15 most common places of incorporation; Jersey, the British Virgin Islands, Guernsey and the Isle of Man are far ahead of the rest|Where the companies are incorporated. Red: Crown Dependencies and British Overseas Territories.}}
+
+<!-- wp:paragraph -->
+<p>Owning property through a company registered abroad is legal, and companies do it for many different reasons. This list cannot tell those reasons apart, and the place a company is registered says nothing about how it behaves.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:pullquote -->
+<figure class="wp-block-pullquote"><blockquote><p>Half of the mapped titles sit in about one in fifty small areas. Yet {{pc_lsoa_with_any|f0}}% of small areas have at least one.</p></blockquote></figure>
+<!-- /wp:pullquote -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Dearer, flatter, newer</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The big differences between places are easy to see. The more interesting question is what happens inside a single district. So I compared small areas within the same district, using what the Council Tax list says about their homes. Ten more percentage points of homes in the top Council Tax bands go with {{x.sh_high_pc|f0}}% more overseas company titles per home. Ten more points of flats go with {{x.sh_flat_pc|f0}}% more. Ten more points of homes built since 2009 go with {{x.sh_new_pc|f0}}% more.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_models.png|Three panels of dots with intervals: every check for top bands, flats and new homes sits to the right of 1, and the shuffled placebo sits exactly at 1|Rate ratios for 10 more percentage points, with 95% intervals, under the main model and every check.}}
+
+<!-- wp:paragraph -->
+<p>All three held in every one of the {{x.rob_n|int}} checks I had planned, including leaving London out, leaving each region out in turn, and counting flats only. As a test, I also shuffled each district's titles at random across its small areas 200 times. The shuffled versions show nothing at all, so the pattern is not an accident of the method. It describes where the titles are. It does not tell us why they are there.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A snapshot, not a history</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The list only contains titles owned today, with the date the current owner was added. The most common year is {{year_peak|raw}}, with {{year_peak_n|int}} titles. Since 2022, {{since_2022|int}} titles have been added. Titles that were sold on are no longer in the list, so the older years look smaller than they really were.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_years.png|Bar chart of titles by the year the current owner was added, rising to a peak in 2017 and lower since 2020, mostly from the Crown Dependencies and Overseas Territories|Titles in the November 2026 list by the year the current owner was added. 2026 is a part year.}}
+
+<!-- wp:paragraph -->
+<p>Most owners hold just one title: {{pc_owners_one_title|f0}}% of the {{n_owners|int}} companies. A few hold hundreds, and {{x.holders_100plus_districts|int}} of the ten largest hold titles in more than 100 districts each. Counting titles is not counting value, and a big count says nothing about how a company behaves.</p>
+<!-- /wp:paragraph -->
+
+{{IMG|b_holders.png|Bar chart of the ten companies holding the most titles, between 443 and 1,270 each, mostly incorporated in Jersey and Guernsey|The ten largest holders by number of titles, with where they are incorporated and how many districts they own in.}}
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How I did this</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The titles come from HM Land Registry's list of overseas companies that own property in England and Wales, the full file for November 2026. I matched each title's postcode to its small area (an LSOA, about 1,500 people). {{n_geocoded|int}} titles ({{pc_geocoded|f0}}%) have a postcode that works; the rest, often land, are counted in their district only. Homes and their Council Tax bands, type and age come from the Valuation Office Agency's 2025 tables. I cleaned the countries (American states into the United States, the emirates into the UAE and so on) and wrote down my questions, my definitions and the checks I would run before computing any counts. The analysis was pre-specified in a written plan, and the paper reports it in full.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The licence for this list allows non-commercial use and does not allow the list itself to be republished. So the map, the paper and the data only ever show counts for areas, countries and years. No title, address or postcode from the list appears anywhere.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>What this can't tell you: who really owns these companies, what the properties are used for, or why they are where they are. The list leaves out property owned from abroad through UK companies, trusts or in a person's own name. A title can be a parking space or a business park. And the Council Tax bands I used to describe each area are based on 1991 values in England and 2003 values in Wales.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons -->
+<div class="wp-block-buttons"><!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://maps.tristanhotham.com/overseas-owners/">Explore the interactive version</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://doi.org/10.5281/zenodo.24115198">Read the paper</a></div>
+<!-- /wp:button -->
+<!-- wp:button -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://github.com/Tristan-Hotham/overseas-owners">Data and code</a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Notes and sources</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Information produced by HM Land Registry © Crown copyright 2026. Overseas companies that own property in England and Wales, full file, data at November 2026. Used under HM Land Registry's licence for non-commercial use; only aggregate counts are published.</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Homes: Valuation Office Agency, Council Tax: stock of properties 2025 (Open Government Licence). Postcodes to small areas: postcodes.io (ONS Postcode Directory, Open Government Licence). Boundaries: ONS (Open Government Licence). Base map: OpenFreeMap, OpenStreetMap contributors (ODbL).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>Further reading: R. Fernandez, A. Hofman and M. Aalbers, London and New York as a safe deposit box for the transnational wealth elite (2016); R. Atkinson, Alpha City (2020); F. Sá, The effect of foreign investors on local housing markets (2025); M. Collin, F. Hollenbach and D. Szakonyi, The end of Londongrad? (2025); Transparency International UK, Faulty Towers (2017).</li>
+<!-- /wp:list-item -->
+<!-- wp:list-item -->
+<li>I wrote the text, with drafting and editing assistance from Claude (Anthropic), which also helped prepare the analysis code. I reviewed and checked all text and results.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->

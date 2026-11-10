@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Who owns your street? | Property in England and Wales held by overseas companies</title>
+<meta name="description" content="Every small area of England and Wales by the number of property titles held by overseas companies per 1,000 homes. {{pc_uko|f0}}% of the {{n_titles|int}} titles are held by companies from the Crown Dependencies and British Overseas Territories.">
+<meta property="og:title" content="Who owns your street?">
+<meta property="og:description" content="{{n_titles|int}} property titles in England and Wales held by overseas companies, mapped for every small area. Westminster has {{x.westminster_rate|f0}} per 1,000 homes.">
+<meta property="og:image" content="https://maps.tristanhotham.com/overseas-owners/header.png">
+<meta property="og:url" content="https://maps.tristanhotham.com/overseas-owners/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800;9..144,900&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<style>
+{{CSS}}
+.keys .bands span{outline-offset:-1px}
+</style></head>
+<body>
+<div class="topbar">
+  <a class="tb-name" href="#mapWrap">Who owns your street?</a>
+  <span class="tb-k">Data study · 2026</span>
+  <nav class="tb-links"><a href="#essay">About</a><button class="theme" id="theme" aria-label="Toggle dark mode">◐</button><a href="https://doi.org/10.5281/zenodo.24115198">Paper</a><a class="x" href="{{REPO}}">Data and code</a></nav>
+</div>
+<div class="mapband">
+  <div class="pane" id="mapWrap" data-fullscreen-map role="application" aria-label="Map of England and Wales coloured by property titles held by overseas companies per 1,000 dwellings in each small area">
+    <div id="map"></div>
+    <div class="nojs" id="nojs">Loading the map of {{n_lsoa|int}} small areas. It needs JavaScript and WebGL.</div>
+    <div class="cartouche" id="cartouche">
+      <button class="ct-toggle" id="ctToggle" aria-expanded="true">Who owns your street? ▾</button>
+      <button class="ct-fold" id="ctFold" title="Fold the title" aria-label="Fold the title">▴</button>
+      <div class="ct-body">
+        <div class="kicker"><b>Data study</b><span>2026</span></div>
+        <h1>Who owns <span class="a">your street?</span></h1>
+        <p class="dek">Property titles in England and Wales held by companies incorporated overseas, per 1,000 homes, for every small area (LSOA). Pick where the companies come from at the bottom; tap an area or district for its counts. Search a place or a postcode. England and Wales only.</p>
+        <div class="byline">{{BYLINE}}</div>
+      </div>
+    </div>
+    <div class="ov-top">
+      <div class="srch"><input type="search" id="q" placeholder="Find a place, district or postcode" aria-label="Find a place, district or postcode" autocomplete="off"><ul class="sug" id="sug" role="listbox"></ul></div>
+      <div class="chips" id="chips"><button class="chip lyr" id="lyrBtn" aria-expanded="false" aria-controls="lp">Layers</button></div>
+    </div>
+    <div class="lp" id="lp" role="dialog" aria-label="Map layers">
+      <h4>Layers</h4>
+      <label><input type="checkbox" id="lyA" checked> Small areas (colours)</label>
+      <label><input type="checkbox" id="lyO" checked> Small-area outlines (close up)</label>
+      <label><input type="checkbox" id="lyD" checked> District boundaries</label>
+      <label><input type="checkbox" id="lyB" checked> Base map labels</label>
+    </div>
+    <div class="keys" id="keys"><b id="keyTitle">Titles per 1,000 dwellings</b><div id="keyBody"></div><div class="row kx" style="color:#6E604E">England and Wales only; grey: no dwellings recorded</div><div class="row" style="color:#6E604E;font-size:10px">Information produced by HM Land Registry © Crown copyright 2026. Data: November 2026.</div></div>
+    <div class="tl" id="tl"><label for="mode" class="tl-l">Companies from</label><select id="mode" aria-label="Which companies to show"></select></div>
+  </div>
+</div>
+<div class="wrap" id="essay">
+{{ESSAY}}
+<details><summary>Sources and licences</summary>
+<ul class="plain">
+<li>Overseas-company titles: HM Land Registry, Overseas companies that own property in England and Wales, full file, data at November 2026. Information produced by HM Land Registry © Crown copyright 2026. Used under HM Land Registry's licence for this dataset for non-commercial research; only aggregate counts are shown, and no title number, address or postcode is reproduced here.</li>
+<li>Dwellings: Valuation Office Agency (2025), Council Tax: stock of properties, 2025, tables CTSOP4.1 and CTSOP3.1, at 31 March 2025. Official Statistics, Open Government Licence v3.0.</li>
+<li>Postcode to small area: postcodes.io (ONS Postcode Directory, Open Government Licence v3.0). Postcodes you type in the search box are looked up at api.postcodes.io.</li>
+<li>Boundaries: ONS Lower layer Super Output Areas (December 2021) and Local Authority Districts (December 2023), generalised clipped, Open Government Licence v3.0 (contains OS data © Crown copyright and database right), LSOAs via the GitHub copy in drkane/geo-lookups. Simplified for the web.</li>
+<li>Search places: Wikidata (CC0). Base map: OpenFreeMap Positron style (OpenStreetMap, ODbL). MapLibre GL JS 4.7.1 (BSD 3-Clause), topojson-client 3.1.0 (ISC).</li>
+<li>Text CC BY 4.0; code MIT; figures, maps and derived counts are for non-commercial use only (CC BY-NC 4.0 and HM Land Registry's terms).</li>
+</ul></details>
+<div class="cta"><a class="p" href="https://doi.org/10.5281/zenodo.24115198">Read the paper</a><a href="{{REPO}}">Data and code</a><a href="https://blog.tristanhotham.com/2026/10/31/overseas-owners/">Blog post</a></div>
+<footer>
+<p>Information produced by HM Land Registry © Crown copyright 2026. Overseas companies data as at November 2026.</p>
+<p>Dr Tristan Hotham, Independent researcher. ORCID <a href="https://orcid.org/0000-0003-4931-9349">0000-0003-4931-9349</a>.</p>
+<p>Cite as: Hotham, T. (2026) Who owns your street? The small-area geography of property in England and Wales held by overseas companies. Zenodo. <a href="https://doi.org/10.5281/zenodo.24115198">https://doi.org/10.5281/zenodo.24115198</a></p>
+<p>Code: <a href="{{REPO}}">github.com/Tristan-Hotham/overseas-owners</a> (MIT). Text CC BY 4.0; figures and data non-commercial (see LICENSE).</p>
+<p>{{AI}}</p>
+</footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+<script src="js/page.js?v={{VERSION}}"></script>
+{{FULLSCREEN}}
+<script src="https://maps.tristanhotham.com/assets/site-nav.js" defer></script>
+</body>
+</html>

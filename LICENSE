@@ -1,0 +1,30 @@
+Code (code/, js/, reddit/collage.py): MIT License
+
+Copyright (c) 2026 Tristan Hotham
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Text of the paper, README and blog: Creative Commons Attribution 4.0 International (CC BY 4.0), https://creativecommons.org/licenses/by/4.0/
+Figures, maps, header, GIF and collage (they show HM Land Registry aggregates): Creative Commons Attribution-NonCommercial 4.0
+(CC BY-NC 4.0), https://creativecommons.org/licenses/by-nc/4.0/, plus the HM Land Registry attribution below.
+
+HM LAND REGISTRY DATA: NON-COMMERCIAL TERMS
+The counts in data/ (lsoa_counts.csv, lad_counts.csv, region_counts.csv, jurisdictions.csv, years.csv, prices.csv,
+holders.csv, site_lsoa.json, site.json, lad.geojson, results.json, models.csv) and every figure, map, GIF and collage are
+derived from: HM Land Registry, Overseas companies that own property in England and Wales, full file, data at November 2026.
+Information produced by HM Land Registry © Crown copyright 2026.
+That dataset was used under HM Land Registry's licence for personal, non-commercial use. These derived aggregates are
+shared for non-commercial research and reuse only, with the attribution above. They are NOT released under CC BY or any
+licence that would allow commercial use, and nothing here may be used to reconstruct, republish or sell the HM Land Registry
+information. No title number, property address, postcode, proprietor address or row-level record from the dataset is
+included in this repository. For any other use, obtain the data and a licence from HM Land Registry
+(https://use-land-property-data.service.gov.uk/).
+
+Other sources: Valuation Office Agency Council Tax stock of properties 2025 (Open Government Licence v3.0); ONS boundaries
+(Open Government Licence v3.0; contains OS data © Crown copyright and database right), LSOAs via drkane/geo-lookups;
+postcodes.io (ONS Postcode Directory, OGL v3.0); Tax Justice Network Financial Secrecy Index 2018 secrecy scores (via
+Global-Witness/secret-property-analysis-2019-public); Wikidata (CC0) for search places.

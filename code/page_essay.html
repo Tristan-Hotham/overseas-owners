@@ -1,0 +1,35 @@
+<div class="kicker"><b>Data study</b><span>2026</span><span>England and Wales</span></div>
+<h2><span class="n">01 · What this is</span>{{n_titles|int}} titles held by overseas companies</h2>
+<p>HM Land Registry publishes a list of every registered property title in England and Wales whose legal owner is a company incorporated outside the UK. The version used here is the full file for November 2026. It holds {{n_titles|int}} titles. A title is a legal registration, not a home: it can be one flat, a house, a shop, an office block, a field or a whole estate. Individuals, UK companies and charities are not in the list.</p>
+<p>I placed each title in its small area (LSOA, about 1,500 people) from its postcode and divided by the number of homes on the Council Tax list. {{n_geocoded|int}} titles ({{pc_geocoded|f0}}%) have a postcode that finds a small area; the other {{x.n_no_lsoa|int}}, often land, are counted in their district only. Across England and Wales there are {{ew_rate|f1}} overseas-company titles per 1,000 homes, about one for every {{x.one_in|f0}} homes.</p>
+<div class="stats">
+<div class="stat"><b>{{pc_uko|f0}}%</b><span>held by companies from the Crown Dependencies and British Overseas Territories</span></div>
+<div class="stat"><b>{{x.westminster_rate|f0}}</b><span>titles per 1,000 homes in Westminster ({{ew_rate|f1}} across England and Wales)</span></div>
+<div class="stat"><b>{{pc_london|f0}}%</b><span>of all titles are in London, which has {{pc_london_dw|f0}}% of homes</span></div>
+</div>
+
+<h2><span class="n">02 · Where</span>Central London, and then almost everywhere</h2>
+<p>The City of London has the highest rate ({{x.city_rate|f0}} titles per 1,000 homes, though it has few homes), then Westminster ({{x.westminster_rate|f0}}) and Kensington and Chelsea ({{x.kc_rate|f0}}). Those two boroughs alone hold {{westminster_kc_titles|int}} titles, {{westminster_kc_pc|f0}}% of the total, with under 1% of the homes. Outside London the highest district rate is in Salford ({{x.salford_rate|f1}} per 1,000).</p>
+<div class="figure"><img src="img/lad.jpg" alt="Bar chart of the 20 districts with the most overseas-company titles per 1,000 homes, led by the City of London, Westminster and Kensington and Chelsea" loading="lazy"></div>
+<p>The titles are far more bunched together than homes are. Half of the titles that can be placed in a small area sit in just {{half_titles_lsoas|int}} small areas, {{half_titles_lsoas_pc|f1}}% of the total. {{x.pc_lsoa_none|f0}}% of small areas have none at all. Some of the very highest small areas are single buildings sold as many separate units: in {{explore.top10_lsoa_single_owner_majority|int}} of the 10 highest, one company holds more than half the titles.</p>
+
+<h2><span class="n">03 · Who</span>Jersey, the British Virgin Islands, Guernsey and the Isle of Man</h2>
+<p>The companies come from {{x.n_named_jur|int}} named places. Four hold {{top4_pc|f0}}% of all titles: Jersey ({{top_j.0.n|int}}), the British Virgin Islands ({{top_j.1.n|int}}), Guernsey ({{top_j.2.n|int}}) and the Isle of Man ({{top_j.3.n|int}}). Counting all the Crown Dependencies and British Overseas Territories, it is {{pc_uko|f0}}%. Holding property through an overseas company is legal, and companies do it for many different reasons, which this list cannot tell apart.</p>
+<div class="figure"><img src="img/jur.jpg" alt="Bar chart of the 15 most common places of incorporation, led by Jersey, the British Virgin Islands, Guernsey and the Isle of Man" loading="lazy"></div>
+
+<h2><span class="n">04 · What kind of place</span>Dearer, flatter, newer</h2>
+<p>Comparing small areas inside the same district, overseas-company titles are more common where more homes are in the top Council Tax bands, where more homes are flats, and where more were built since 2009. Ten more percentage points of top-band homes go with {{x.sh_high_pc|f0}}% more titles, ten more points of flats with {{x.sh_flat_pc|f0}}% more, and ten more points of new homes with {{x.sh_new_pc|f0}}% more. All three hold in each of {{x.rob_n|int}} checks, including without London, and a placebo that shuffles titles at random within districts shows nothing. This describes where the titles are; it does not show why.</p>
+<div class="figure"><img src="img/models.jpg" alt="Three panels of rate ratios with 95% intervals; every check sits above 1 and the placebo sits at 1" loading="lazy"></div>
+
+<h2><span class="n">05 · When</span>The file is a snapshot</h2>
+<p>The file only holds titles owned today, with the date the current owner was added. Owners added in {{year_peak|raw}} are the most common ({{year_peak_n|int}} titles). Since 2022 {{since_2022|int}} titles have been added. In August 2022 the Register of Overseas Entities began to require these companies to name their beneficial owners at Companies House. Titles sold on are no longer in the file, so older years look smaller than they were.</p>
+<div class="figure"><img src="img/years.jpg" alt="Bar chart of titles by the year the owner was added, rising to a peak in 2017" loading="lazy"></div>
+
+<h2><span class="n">06 · Caveats</span>What this cannot say</h2>
+<ul class="plain">
+<li>Titles are not homes, and their size varies hugely. A single title can be a whole office block or a field.</li>
+<li>The list covers companies incorporated overseas. Property owned from abroad through UK companies, trusts or in a person's own name is not in it.</li>
+<li>Price paid is given for {{pc_price|f0}}% of titles and is the price at registration, not today's value.</li>
+<li>The Council Tax bands that describe each area are based on 1991 values in England and 2003 values in Wales.</li>
+<li>Small areas with few homes, like the City of London, can show very high rates from a handful of buildings.</li>
+</ul>
